@@ -8,7 +8,8 @@ public class Main {
     // doing stuff in my branch.
 		// Going to commit this then try something.
 		// forgot this
-		
+		Test t = new Test();
+		t.Foo();
 	}
 
 }
