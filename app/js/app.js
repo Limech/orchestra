@@ -1,39 +1,38 @@
 'use strict';
 
 var herrmannApp = angular.module('herrmannApp', ['ngRoute'])
-    .config(function($routeProvider, $locationProvider)
-    {    
-        //$locationProvider.html5Mode(true);
+    .config(function ($routeProvider, $locationProvider) {
+        $locationProvider.html5Mode(true).hashPrefix('!');
         $routeProvider
             .when('/',
             {
-                templateUrl : 'templates/home.html'
+                templateUrl: 'templates/home.html'
             })
-            
-            .when('/home',
+
+            .when('/app/home',
             {
-                templateUrl : 'templates/home.html'
+                templateUrl: 'templates/home.html'
             })
-            
-            .when('/contact',
+
+            .when('/app/contact',
             {
-                templateUrl : 'templates/contact.html'
-            })  
-               
-            .when('/about',
-            {
-                templateUrl : 'templates/about.html'
+                templateUrl: 'templates/contact.html'
             })
-                                    
-            .when('/news',
+
+            .when('/app/about',
             {
-                templateUrl : 'templates/news.html'
+                templateUrl: 'templates/about.html'
             })
-            
-            .when('/ad-assets',
+
+            .when('/app/news',
             {
-                templateUrl : 'templates/ad-assets.html'
+                templateUrl: 'templates/news.html'
             })
- 
-            .otherwise({redirectTo: '/home'});
+
+            .when('/app/ad-assets',
+            {
+                templateUrl: 'templates/ad-assets.html'
+            })
+
+            .otherwise({ redirectTo: '/app/home' });
     });
