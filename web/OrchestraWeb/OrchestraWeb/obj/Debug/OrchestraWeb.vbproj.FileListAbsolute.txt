@@ -1,9 +1,0 @@
-C:\Users\Limech\Documents\CodingProjects\orchestra\web\OrchestraWeb\OrchestraWeb\bin\OrchestraWeb.dll.config
-C:\Users\Limech\Documents\CodingProjects\orchestra\web\OrchestraWeb\OrchestraWeb\bin\OrchestraWeb.dll
-C:\Users\Limech\Documents\CodingProjects\orchestra\web\OrchestraWeb\OrchestraWeb\bin\OrchestraWeb.pdb
-C:\Users\Limech\Documents\CodingProjects\orchestra\web\OrchestraWeb\OrchestraWeb\bin\OrchestraWeb.xml
-C:\Users\Limech\Documents\CodingProjects\orchestra\web\OrchestraWeb\OrchestraWeb\obj\Debug\OrchestraWeb.Resources.resources
-C:\Users\Limech\Documents\CodingProjects\orchestra\web\OrchestraWeb\OrchestraWeb\obj\Debug\OrchestraWeb.vbproj.GenerateResource.Cache
-C:\Users\Limech\Documents\CodingProjects\orchestra\web\OrchestraWeb\OrchestraWeb\obj\Debug\OrchestraWeb.dll
-C:\Users\Limech\Documents\CodingProjects\orchestra\web\OrchestraWeb\OrchestraWeb\obj\Debug\OrchestraWeb.xml
-C:\Users\Limech\Documents\CodingProjects\orchestra\web\OrchestraWeb\OrchestraWeb\obj\Debug\OrchestraWeb.pdb
