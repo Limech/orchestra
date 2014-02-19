@@ -1,0 +1,270 @@
+@primary-color: #AA0000;
+@primary-color-hover: darken(@primary-color, 5%);
+@secondary-color: #111;
+
+@gaulhofer-color: #F29400;
+@gaulhofer-hover-color: darken(@gaulhofer-color, 5%);
+
+@heco-color: #F18504;
+@heco-hover-color: darken(@heco-color, 5%);
+
+@pitzl-color: #008E7E;
+@pitzl-hover-color: dargen(@pitzl-color, 5%);
+
+@pavatex-color: #77B757;
+@pavatex-hover-color: darken(@pavatex-color, 5%);
+
+@siga-color: #48AEFF;
+@siga-hover-color: darken(@siga-color, 5%);
+
+@hanno-color: #00707C; 
+@hanno-hover-color: darken(@hanno-color, 5%);
+
+@balteschwiler-color: #F51E30;
+@balteschwiler-hover-color: darken(@balteschwiler-color, 5%);
+
+@standard-border-width: 0.9em;
+
+
+
+html
+{
+  height: 100%;
+}
+
+body
+{
+  height: 100%;
+  background: @secondary-color;
+}
+
+
+h1, h2, h3, h4, h5, h6
+{
+  text-align: center;
+  color: #666;
+  font-family: 'Open Sans';
+}
+
+p
+{
+  text-align: justify;
+}
+
+a
+{
+  outline: none; 
+}
+
+a.button, a.button-group
+{
+  background: @primary-color;
+  
+  &:hover, &:active, &:focus
+  {
+     background: @primary-color-hover;
+  }
+  
+  &.small
+  {
+    font-size: 1.0em;
+  }
+}
+
+.f-dropdown
+{
+  @background: #222;
+  background: @background;
+  border: 0;
+  
+  &:before, &:after
+  {
+    border: 0;
+  }
+  
+  li
+  {
+    background: none;
+    float: none;
+    a
+    {
+      padding: 1em 2em 1em 1.2em;
+      border-left: @standard-border-width solid @background;
+      color: #fff;
+     
+      &:hover
+      {
+        border-left: @standard-border-width solid @primary-color;
+        background: darken(@background, 2%);
+      }
+    }
+  }
+}
+
+.off-canvas-wrap
+{
+  height: 100%;
+  .inner-wrap
+  {
+    height: 100%;
+    .right-off-canvas-menu
+    {
+      background: @secondary-color;
+      
+      .off-canvas-list
+      { 
+        li
+        {
+          label
+          {
+            font-size: 12px;
+          }
+          a
+          {
+            border: 0; 
+            &:focus, &:active
+            {
+              color: #ffffff;
+              background: @primary-color;
+            }
+          }
+        }
+      }
+    }
+    .exit-off-canvas
+    {
+      height: 100%;
+    }
+  }
+}
+
+
+.header
+{
+  background: #fff;
+  .row
+  {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+        
+    a.right-off-canvas-toggle
+    {
+      /* Small */
+      @media only screen and (max-width: 40em) 
+      { 
+        font-size: 1.6em;
+        padding: 0.1em 0.4em;
+        margin-top: 0.15em;
+        margin-bottom: 0.15em;       
+      }
+      
+      /* Medium */
+      @media only screen and (min-width: 40.063em) and (max-width: 64em) 
+      {
+        font-size: 2.5em;
+        padding: 0.18em 0.5em;
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+      }
+    }
+
+    .button-group
+    {
+      /* Large */
+      @media only screen and (min-width: 64em) 
+      {
+        margin-top: 1em; 
+        margin-bottom: 0em;          
+      }
+    }   
+  }
+}
+
+.main
+{
+  background: #fff;
+  min-height: 300px; // temp ************************
+  padding-bottom: 2em;
+}
+
+.footer
+{
+  background-color: @secondary-color;
+  border-top: @standard-border-width solid @primary-color;
+  .row.top
+  {    
+    .columns
+    { 
+      a
+      {
+        text-align: center;
+        color: #fff;
+        display: block;
+        
+        &:hover
+        {
+          background: darken(@secondary-color, 2%);
+        }
+        
+        i
+        {
+          margin: 0.2em;
+          font-size: 2em;
+        }
+      }
+      
+      /* Small */
+      @media only screen and (max-width: 40em) 
+      {
+        a
+        { 
+           padding: 1em;
+        }
+      }
+      
+      /* Medium + */
+      @media only screen and (min-width: 40.063em) 
+      {
+        a
+        { 
+           padding-top: 2em;
+           padding-bottom: 4em;
+        }  
+      }
+    }
+  }
+  
+  .row.bottom
+  {
+    border-top: 1px solid lighten(@secondary-color, 5%);
+    .columns
+    {
+      color: #555;
+      text-align: center;
+      
+       a
+      {
+        padding: 1em;
+        color: #555;
+        display: block;
+        
+        &:hover
+        {
+          background: darken(@secondary-color, 2%); 
+        }
+      }
+            
+      i
+      {
+        margin: 0 0 0.2em 0;
+        font-size: 2em;
+      }
+    }
+    
+    .copyright
+    {
+      padding: 1em;
+    }
+  } 
+} 
+

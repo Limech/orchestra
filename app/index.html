@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" class="no-js" data-ng-app="herrmannApp">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="author" content="Herrmann's Timber-Frame Homes">
+		<link rel="icon" href="icon.ico" />
+		<title>Herrmann's Timber-Frame Homes</title>
+		<base href="." />
+
+		<link rel="stylesheet" href="lib/foundation/css/foundation.min.css" />
+		<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="lib/fonts/raleway.css"/>
+		<link rel="stylesheet" href="lib/fonts/open-sans.css"/>
+		<link rel="stylesheet/less" href="styles/app.less" />
+		
+		<script src="lib/foundation/js/vendor/modernizr.js"></script>
+		<script src="lib/less.min.js"></script>
+	</head>
+	<body data-ng-controller="supplierCtrl">
+		<div class="off-canvas-wrap">
+  			<div class="inner-wrap">
+                <aside class="right-off-canvas-menu show-for-medium-down"> 
+                    <ul class="off-canvas-list">
+                        <li><a href="contact.html">Contact</a></li>                               
+                        <li><label>Products</label></li>          
+                        <li data-ng-repeat="supplier in suppliers">
+                        	<a href="{{supplier.url}}">{{supplier.description}}</a>
+                        </li>                        
+                    </ul>
+                </aside>
+				<div class="header">
+					<div class="row">
+						<div class="small-10 large-6 columns">
+							<a href="#/home"><img src="img/site-logo.png" alt="herrmannframes logo"/></a>
+						</div>
+						<div class="small-2 large-6 columns">
+							<a class="right-off-canvas-toggle button small right show-for-medium-down"><i class="fa fa-bars"> </i></a>
+							<ul class="button-group right show-for-large-up">
+								<li>
+									<a data-dropdown="products-drop" class="button small dropdown">Products</a>
+									<ul id="products-drop" data-dropdown-content class="f-dropdown">
+				                        <li data-ng-repeat="supplier in suppliers">
+				                        	<a href="{{supplier.url}}">{{supplier.description}}</a>
+				                        </li> 
+									</ul>
+								</li>
+								<li>
+									<a href="#/contact" class="button small">Contact</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="main">
+					<div data-ng-view> </div>
+				</div>
+				<div class="footer">
+                    <div class="row top">
+                        <div class="medium-3 columns">
+							<a href="#/contact"><i class="fa fa-envelope-o"> </i><br />
+								Contact
+							</a>
+                        </div>
+                        <div class="medium-3 columns">
+							<a href="#/about"><i class="fa fa-info"> </i><br />
+								About Us
+							</a>
+                        </div>
+                        <div class="medium-3 columns">
+							<a href="#/news"><i class="fa fa-bullhorn"> </i><br />
+								News &amp; Events
+							</a>
+                        </div>
+                        <div class="medium-3 columns">
+							<a href="#/ad-assets"><i class="fa fa-picture-o"> </i><br />
+								Ad Assets
+							</a>
+                        </div>
+                    </div>
+                    <div class="row bottom">
+                        <div class="medium-3 medium-push-9 columns">
+							<a href="http://www.youtube.com/user/HerrmannFrames" target="_blank">
+	                            <i class="fa fa-film"> </i><br/>
+	                            YouTube
+	                        </a>
+                        </div>
+                        <div class="medium-9 medium-pull-3 columns">
+                            <div class="row">
+                                <div class="medium-6 columns">
+									<a href="#/home"><img src="img/footer-logo.png" alt="HerrmannFrames Logo"/></a>
+                                </div>
+                                <div class="medium-6 columns copyright">
+                                    &copy; Herrmann's Timber-Frame Homes<br/>
+                                    2007 - 2014<br/>
+                                    All rights reserved
+                                </div>
+                            </div>
+                        </div>              
+                    </div>
+				</div>
+				<a class="exit-off-canvas"> </a>
+			</div>
+		</div>
+		<script src="lib/foundation/js/vendor/jquery.js"></script>
+		<script src="lib/foundation/js/foundation.min.js"></script>
+		<script> $(document).foundation(); </script>
+		<script src="lib/angular/angular.js"></script>
+		<script src="lib/angular/angular-route.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controllers/suppliers.js"></script>
+		<script src="js/services/suppliers.js"></script>
+	</body>
+</html>
